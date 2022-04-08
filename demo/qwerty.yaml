@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+  spec:
+    selector:
+      matchLabels :
+        app: demo
+        replicas: 3
+        template:
+          metadata:
+            labels:
+              app: demo
+              spec:
+                containers:
+                 - nume : hello
+                  image: C:\Users\Felix\Desktop\demo
+                  ports:
+                    - containerPort: 8080
